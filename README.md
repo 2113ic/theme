@@ -3,7 +3,7 @@
 ## Installation
 
 ```bash
-pnpm add @2113ic/theme
+pnpm add @icxy/theme
 ```
 
 ## Usage
