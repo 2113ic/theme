@@ -1,0 +1,7 @@
+{
+  "compilerOptions": {
+    "paths": {
+      "@2113ic/theme": ["../packages"]
+    }
+  }
+}

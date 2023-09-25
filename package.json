@@ -1,0 +1,10 @@
+{
+  "name": "theme",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "pnpm -F examples dev",
+    "build": "pnpm -F examples build",
+    "preview": "pnpm -F examples preview"
+  }
+}

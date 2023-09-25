@@ -1,0 +1,22 @@
+{
+  "name": "@2113ic/theme",
+  "version": "0.0.1",
+  "description": "2113ic's website theme component and color library",
+  "main": "./index.ts",
+  "module": "./index.ts",
+  "types": "./index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./index.ts"
+    },
+    "./styles": {
+      "import": "./styles/index.scss"
+    }
+  },
+  "keywords": [
+    "Theme",
+    "Scss"
+  ],
+  "author": "2113ic icxiaoyanz@gmail.com",
+  "license": "MIT License"
+}

@@ -1,0 +1,18 @@
+{
+  "name": "examples",
+  "private": true,
+  "version": "1.0.0",
+  "description": "examples site",
+  "scripts": {
+    "dev": "vite dev"
+  },
+  "dependencies": {
+    "@2113ic/theme": "workspace:*",
+    "vue": "^3.3.4"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.3.4",
+    "sass": "^1.68.0",
+    "vite": "^4.4.9"
+  }
+}
