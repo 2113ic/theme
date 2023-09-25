@@ -10,7 +10,7 @@ importers:
 
   examples:
     dependencies:
-      '@2113ic/theme':
+      '@icxy/theme':
         specifier: workspace:*
         version: link:../packages
       vue:

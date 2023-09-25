@@ -1,5 +1,5 @@
 {
-  "name": "@2113ic/theme",
+  "name": "@icxy/theme",
   "version": "0.0.1",
   "description": "2113ic's website theme component and color library",
   "main": "./index.ts",
@@ -17,6 +17,13 @@
     "Theme",
     "Scss"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/2113ic/theme"
+  },
+  "bugs": {
+    "url": "https://github.com/2113ic/theme/issues"
+  },
   "author": "2113ic icxiaoyanz@gmail.com",
   "license": "MIT License"
 }

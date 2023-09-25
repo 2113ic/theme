@@ -7,7 +7,7 @@
     "dev": "vite dev"
   },
   "dependencies": {
-    "@2113ic/theme": "workspace:*",
+    "@icxy/theme": "workspace:*",
     "vue": "^3.3.4"
   },
   "devDependencies": {

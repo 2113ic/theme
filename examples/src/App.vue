@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useTheme } from '@2113ic/theme'
+import { useTheme } from '@icxy/theme'
 
 const { toggleTheme } = useTheme()
 </script>
