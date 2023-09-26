@@ -1,7 +1,0 @@
-{
-  "compilerOptions": {
-    "paths": {
-      "@icxy/theme": ["../packages"]
-    }
-  }
-}

@@ -1,5 +1,7 @@
 # Theme
 
+> Add theme switching functionality to your website
+
 ## Installation
 
 ```bash
@@ -26,11 +28,23 @@ Add the following script to your index.html head tag:
 </script>
 ```
 
+In your main.ts:
+
+```ts
+import { createApp } from 'vue'
+import App from './App.vue'
+
+// import theme
+import '@icxy/theme/index.css'
+
+createApp(App).mount('#app')
+```
+
 In your vue toggle-theme component:
 
 ```vue
 <script setup>
-import { useTheme } from '@2113ic/theme'
+import { useTheme } from '@icxy/theme'
 
 const { toggleTheme } = useTheme()
 </script>

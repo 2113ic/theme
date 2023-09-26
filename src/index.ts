@@ -1,3 +1,5 @@
+import './styles/index.scss'
+
 export function useTheme() {
   const html = document.documentElement
   const toggleTheme = () => {

@@ -3,8 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>@2113ic/theme example</title>
   <link rel="icon" href="./public/logo.svg" type="svg+/html">
+  <title>@icxy/theme example</title>
+  <script>
+    ; (function initTheme() {
+      const html = document.documentElement
+      const storedTheme = localStorage.getItem('theme')
+      const systemTheme = window.matchMedia(
+        '(prefers-color-scheme: dark)'
+      ).matches
+      const applyTheme = storedTheme || (systemTheme ? 'dark' : 'light')
+
+      localStorage.setItem('theme', applyTheme)
+      html.setAttribute('theme', applyTheme)
+    })()
+  </script>
 </head>
 <body>
   <div id="app"></div>
