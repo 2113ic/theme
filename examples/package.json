@@ -1,6 +1,7 @@
 {
   "name": "examples",
   "private": true,
+  "type": "module",
   "version": "1.0.0",
   "description": "examples site",
   "scripts": {
@@ -8,11 +9,11 @@
   },
   "dependencies": {
     "@icxy/theme": "workspace:*",
-    "vue": "^3.3.4"
+    "vue": "^3.3.8"
   },
   "devDependencies": {
-    "@vitejs/plugin-vue": "^4.3.4",
-    "sass": "^1.68.0",
-    "vite": "^4.4.9"
+    "@vitejs/plugin-vue": "^4.4.1",
+    "sass": "^1.69.5",
+    "vite": "^4.5.0"
   }
 }

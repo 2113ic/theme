@@ -1,6 +1,9 @@
 node_modules
 dist
 
+# exclude all backup files
+*.backup.*
+
 # Log files
 npm-debug.log*
 yarn-debug.log*

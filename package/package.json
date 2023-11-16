@@ -1,0 +1,34 @@
+{
+  "name": "@icxy/theme",
+  "type": "module",
+  "version": "0.0.2",
+  "description": "2113ic's website theme component and color library",
+  "author": "2113ic <icxiaoyanz@gmail.com>",
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
+  "types": "index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs",
+      "types": "./index.d.ts"
+    },
+    "./*": "./dist/*"
+  },
+  "files": [
+    "dist",
+    "*.d.ts"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/2113ic/theme"
+  },
+  "bugs": {
+    "url": "https://github.com/2113ic/theme/issues"
+  },
+  "keywords": [
+    "Theme",
+    "Color"
+  ]
+}

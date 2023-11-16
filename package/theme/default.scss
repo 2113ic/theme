@@ -70,22 +70,22 @@
 }
 
 /* Light scheme (Default) */
-/* Can be forced with theme="light" */
-[theme="light"],
-:root:not([theme="dark"]) {
+/* Can be forced with data-theme="light" */
+[data-theme="light"],
+:root:not([data-theme="dark"]) {
   @include lightVariables;
 }
 
 /* Dark scheme (Auto) */
 /* Automatically enabled if user has Dark mode enabled */
 @media (prefers-color-scheme: dark) {
-  :root:not([theme="light"]) {
+  :root:not([data-theme="light"]) {
     @include darkVariables;
   }
 }
 
 /* Dark scheme (Forced) */
-/* Enabled if forced with theme="dark" */
-[theme="dark"] {
+/* Enabled if forced with data-theme="dark" */
+[data-theme="dark"] {
   @include darkVariables;
 }

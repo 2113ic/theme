@@ -1,7 +1,7 @@
 @import './theme/default.scss';
 
-// .night is dark mode for img.
-[theme='dark'] .night {
+// ._night is dark mode for img.
+[theme='dark'] ._night {
   background-color: hsla(223deg, 71%, 16%, 0.6);
   background-blend-mode: darken;
   filter: brightness(80%) grayscale(20%) contrast(1.2);
@@ -10,8 +10,8 @@
 /* Scrollbar style. */
 /* Reset user proxy style for browser scrollbar. */
 ::-webkit-scrollbar {
-  background-color: transparent;
   width: 12px;
+  background-color: transparent;
 }
 
 ::-webkit-scrollbar-corner {

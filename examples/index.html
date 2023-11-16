@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="./public/logo.svg" type="svg+/html">
+  <link rel="icon" href="/logo.svg" type="svg+/html">
   <title>@icxy/theme example</title>
   <script>
     ; (function initTheme() {
@@ -15,7 +15,7 @@
       const applyTheme = storedTheme || (systemTheme ? 'dark' : 'light')
 
       localStorage.setItem('theme', applyTheme)
-      html.setAttribute('theme', applyTheme)
+      html.setAttribute('data-theme', applyTheme)
     })()
   </script>
 </head>
