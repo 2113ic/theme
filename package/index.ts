@@ -1,4 +1,4 @@
-import './base.scss'
+import './index.scss'
 
 export function useTheme() {
   const html = document.documentElement

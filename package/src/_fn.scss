@@ -1,0 +1,54 @@
+@use 'sass:map';
+@use 'sass:string';
+@use './vars' as *;
+
+@function join($list, $separator: '-') {
+  $result: $prefix + $separator;
+  $len: length($list);
+
+  @for $i from 1 through $len {
+    $item: nth($list, $i);
+    $result: $result + $item;
+
+    @if $i < $len and $item != '' {
+      $result: $result + $separator;
+    }
+  }
+  @return $result;
+}
+
+@function get($val, $levels: null) {
+  $len: length($levels);
+  $result: '';
+
+  @for $i from 1 through $len {
+    $item: nth($levels, $i);
+    $result: $result + var(--#{join(if($item == null, $val, $val $item))});
+
+    @if $i < $len {
+      $result: $result + ' ';
+    }
+  }
+  @return #{$result};
+}
+
+@function bg($vals: '') {
+  $flag: 'bg';
+
+  @return if($vals == '', get($flag), get($flag, $vals));
+}
+@function font($vals: '') {
+  $flag: 'font';
+
+  @return if($vals == '', get($flag), get($flag, $vals));
+}
+@function border($vals: '') {
+  $flag: 'border';
+
+  @return if($vals == '', get($flag), get($flag, $vals));
+}
+@function hover($vals: '') {
+  $flag: 'hover';
+
+  @return if($vals == '', get($flag), get($flag, $vals));
+}

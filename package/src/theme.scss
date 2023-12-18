@@ -1,0 +1,40 @@
+@use './vars' as *;
+@use './mixins' as *;
+
+:root {
+  @include genCSSVar($baseMap);
+  @include genCSSVar($grayMap, 'gray');
+}
+
+@mixin lightVariables {
+  color-scheme: light;
+
+  @include genCSSVar($bgLightMap, 'bg');
+  @include genCSSVar($fontLightMap, 'font');
+  @include genCSSVar($borderLightMap, 'border');
+  @include genCSSVar($hoverLightMap, 'hover');
+}
+
+@mixin darkVariables {
+  color-scheme: dark;
+
+  @include genCSSVar($bgDarkMap, 'bg');
+  @include genCSSVar($fontDarkMap, 'font');
+  @include genCSSVar($borderDarkMap, 'border');
+  @include genCSSVar($hoverDarkMap, 'hover');
+}
+
+[data-theme=light],
+:root:not([data-theme=dark]) {
+  @include lightVariables;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme=light]) {
+    @include darkVariables;
+  }
+}
+
+[data-theme=dark] {
+  @include darkVariables;
+}

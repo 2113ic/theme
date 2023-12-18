@@ -1,0 +1,21 @@
+@use './fn';
+
+@mixin ns($block) {
+  .#{fn.join($block)} {
+    @content;
+  }
+}
+
+@mixin ns-child($child) {
+  @at-root &__#{$child} {
+    @content;
+  }
+}
+
+@mixin genCSSVar($map, $word: '') {
+  @each $key, $val in $map {
+    $carry: if($key == '' and $word != '', $word, $word $key);
+
+    --#{fn.join($carry)}: #{$val};
+  }
+}

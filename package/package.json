@@ -1,23 +1,25 @@
 {
   "name": "@icxy/theme",
   "type": "module",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "2113ic's website theme component and color library",
   "author": "2113ic <icxiaoyanz@gmail.com>",
-  "main": "dist/index.cjs",
-  "module": "dist/index.js",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
   "types": "index.d.ts",
   "exports": {
     ".": {
-      "import": "./dist/index.js",
-      "require": "./dist/index.cjs",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js",
       "types": "./index.d.ts"
     },
     "./*": "./dist/*"
   },
   "files": [
     "dist",
-    "*.d.ts"
+    "src",
+    "*.d.ts",
+    "index.scss"
   ],
   "license": "MIT",
   "repository": {
