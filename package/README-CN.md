@@ -1,19 +1,19 @@
 # Theme
 
-> Add color themes to your website.
+> 为你的网站添加颜色主题
 
-## Features
+## 特性
 
-- Dark mode
-- CSS class control for theme switching
+- 黑暗模式
+- CSS 类控制切换主题
 
-## Usage
+## 用法
 
-Here is an example using a Vue application.
+下面使用 Vue 应用作为例子。
 
-Of course, you can also use it in native applications or other frameworks; it is allowed.
+当然你也可以在原生应用或其他框架中使用，这是允许的。
 
-Add the following code to the head tag of your index.html:
+在你的 index.html head 标签中添加下面代码：
 
 ```html
 <script>
@@ -31,7 +31,7 @@ Add the following code to the head tag of your index.html:
 </script>
 ```
 
-In your main.ts:
+在你的 main.ts：
 
 ```ts
 import { createApp } from 'vue'
@@ -43,7 +43,7 @@ import '@icxy/theme/index.css'
 createApp(App).mount('#app')
 ```
 
-In your theme-switching button component:
+在你的切换主题按钮组件中：
 
 ```vue
 <script setup>
@@ -57,30 +57,30 @@ const { toggleTheme } = useTheme()
 </template>
 ```
 
-## Custom Themes
+## 自定义主题
 
-If you want to customize your own theme, you can use the `@forward` directive in Sass to modify the default theme.
+如果你想自定义自己的主题，你可以使用 sass 的 `@forward` 指令修改默认主题。
 
 ```scss
 @forward '@icxy/theme/src/vars' with (
-  // Change the variable prefix
+  // 改变变量的前缀
   $prefix: 'o',
 );
 ```
 
-You can see the customizable content in [var.scss](<./src/_vars.scss>).
+你可以在 [var.scss](<./src/_vars.scss>) 中查看可改变的内容。
 
-## Tools
+## 工具
 
-`@icxy/theme` provides some SCSS tools for you.
+`@icxy/theme` 提供了一些 scss 工具给你。
 
-### Get CSS Variables
+### 获取 css 变量
 
-`@icxy/theme` will mount the CSS variables needed for the theme on the root element. These variables will all start with a certain prefix (default: `x`).
+`@icxy/theme` 会在 root 元素上挂载主题需要的 css 变量。这些变量都会可以某个前缀开头（默认：`x`）。
 
-The `get` function can help you retrieve these CSS variables without worrying about the prefix.
+`get` 函数可以帮助你获取这些 css 变量，而你不需要关心变量的前缀。
 
-Example:
+例：
 
 ```scss
 .box1 {
@@ -102,9 +102,9 @@ Example:
 }
 ```
 
-You should notice that some variables are classified with `bg`, `font`, `hover`, `border`. So `@icxy/theme` also provides these more direct methods.
+你应该注意到了，某些变量会以 `bg`、`font`、`hover`、`border` 进行分类。所以 `@icxy/theme` 也提供了这些更直接的方法。
 
-For example, the above example can be written as:
+例如，上面的例子可以写成：
 
 ```scss
 .box1 {
@@ -126,13 +126,13 @@ For example, the above example can be written as:
 }
 ```
 
-### Namespace
+### 命名空间
 
-Sometimes, you want to use the same prefix in CSS class names.
+有时候，你想要在 css 类名中也使用相同的前缀。
 
-`@icxy/theme` provides SCSS mixins named `ns` and `ns-child` to help you create BEM-style class names.
+`@icxy/theme` 提供了名为 `ns`、`ns-child` 的 scss mixin 帮助你创建 bem 风格的类名。
 
-Example:
+例：
 
 ```scss
 @include ns('box') {
@@ -146,7 +146,7 @@ Example:
 }
 ```
 
-This is equivalent to:
+这等价于：
 
 ```css
 .x-box {
@@ -160,4 +160,4 @@ This is equivalent to:
 }
 ```
 
-Using these, you can easily create BEM-style class names without worrying about the class name prefix.
+利用它们你可以更轻松创建 bem 风格的类名，而又不需要关心类名的前缀。
