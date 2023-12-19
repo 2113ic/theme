@@ -42,7 +42,7 @@ $bgLightMap: (
   code: hsl(220, 80%, 90%),
   scrollbar: hsl(228, 10%, 90%),
   selection: hsl(220, 80%, 90%),
-);
+) !default;
 $bgDarkMap: (
   '': getGray(950),
   pop: getGray(800),
@@ -50,33 +50,33 @@ $bgDarkMap: (
   code: hsl(246, 28%, 28%),
   scrollbar: hsl(210, 8%, 24%),
   selection: hsla(245, 58%, 51%, 0.4),
-);
+) !default;
 
 $fontLightMap: (
   '': getGray(800),
   sub: getGray(400),
-);
+) !default;
 $fontDarkMap: (
   '': getGray(200),
   sub: getGray(500),
-);
+) !default;
 
 $borderLightMap: (
   '': getGray(300),
   btn: getGray(200),
-);
+) !default;
 $borderDarkMap: (
   '': getGray(700),
   btn: transparent,
-);
+) !default;
 
 $hoverLightMap: (
   '': rgba(0, 0, 0, 0.08),
   dark: rgba(0, 0, 0, 0.06),
   darker: rgba(0, 0, 0, 0.04),
-);
+) !default;
 $hoverDarkMap: (
   '': rgba(255, 255, 255, 0.08),
   dark: rgba(255, 255, 255, 0.06),
   darker: rgba(255, 255, 255, 0.04),
-);
+) !default;
