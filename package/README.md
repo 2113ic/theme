@@ -7,6 +7,12 @@
 - Dark mode
 - CSS class control for theme switching
 
+## install
+
+```bash
+pnpm add @icxy/theme
+```
+
 ## Usage
 
 Here is an example using a Vue application.

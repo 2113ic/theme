@@ -7,6 +7,12 @@
 - 黑暗模式
 - CSS 类控制切换主题
 
+## 安装
+
+```bash
+pnpm add @icxy/theme
+```
+
 ## 用法
 
 下面使用 Vue 应用作为例子。
