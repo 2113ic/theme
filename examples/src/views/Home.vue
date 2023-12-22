@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import TheHeader from '@/components/TheHeader.vue'
 
-const baseList = ['blue', 'gray', 'success', 'warning', 'danger']
+const baseList = ['blue', 'gray', 'green', 'yellow', 'red']
 
 function selectPrimaryColor(evt: MouseEvent) {
   const target = evt.target as HTMLElement
