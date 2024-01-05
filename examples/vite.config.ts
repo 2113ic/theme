@@ -3,8 +3,8 @@ import { resolve } from 'node:path'
 import vue from '@vitejs/plugin-vue'
 
 const utils = `
-@use '@icxy/theme/src/fn' as *;
-@use '@icxy/theme/src/mixins' as *;
+@use '@icxy/theme/styles/fn' as *;
+@use '@icxy/theme/styles/mixins' as *;
 `
 
 export default defineConfig({

@@ -1,7 +1,7 @@
 {
   "name": "@icxy/theme",
   "type": "module",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "2113ic's website theme component and color library",
   "author": "2113ic <icxiaoyanz@gmail.com>",
   "main": "dist/index.js",
@@ -18,7 +18,9 @@
   "files": [
     "dist",
     "src",
+    "styles",
     "*.d.ts",
+    "index.ts",
     "index.scss"
   ],
   "license": "MIT",

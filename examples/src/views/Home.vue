@@ -10,7 +10,6 @@ function selectPrimaryColor(evt: MouseEvent) {
     (el) => el.classList.remove('active')
   );
   target.classList.add('active')
-  console.log(111);
 }
 </script>
 

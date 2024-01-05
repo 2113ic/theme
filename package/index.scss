@@ -1,5 +1,5 @@
-@use './src/fn' as *;
-@use './src/theme';
+@use './styles/fn' as *;
+@use './styles/theme';
 
 // .is-night is dark mode for img.
 [data-theme=dark] .is-night {

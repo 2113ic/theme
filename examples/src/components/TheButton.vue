@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useNameSpace } from '@/utils'
+import { useNameSpace } from '@icxy/theme'
 
 interface BtnProps {
   variant?: 'circle' | 'plain' | 'outline' | 'default'

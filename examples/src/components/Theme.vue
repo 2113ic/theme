@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { useTheme } from '@icxy/theme'
 
-const { toggleTheme } = useTheme()
+const toggleTheme = useTheme()
 </script>
 
 <template>
@@ -21,7 +21,7 @@ const { toggleTheme } = useTheme()
   background-color: transparent;
 
   &:hover {
-    background-color: v('hover');
+    background-color: hover();
   }
 }
 

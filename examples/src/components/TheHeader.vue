@@ -1,8 +1,6 @@
 <script setup>
 import Theme from './Theme.vue';
 import LogoSvg from '@/assets/Theme.svg?raw'
-
-
 </script>
 
 <template>

@@ -2,7 +2,7 @@ import { defineConfig } from 'vite'
 import dts from 'vite-plugin-dts'
 
 export default defineConfig({
-  plugins: [dts({ outDir: './package' })],
+  plugins: [dts({ outDir: './package', rollupTypes: true })],
   build: {
     outDir: './package/dist',
     cssMinify: 'lightningcss',
