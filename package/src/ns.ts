@@ -1,4 +1,11 @@
-type NameSpaceOptions = (string | string[] | Record<string, boolean>)[]
+export type NameSpaceOptions = (string | string[] | Record<string, boolean>)[]
+export type unBemFunction = (block: string, ...args: NameSpaceOptions) => string[]
+
+export interface NameSpaceResult {
+  (...args: NameSpaceOptions): string[];
+  is: (...args: NameSpaceOptions) => string[];
+  child: (child: string, ...args: NameSpaceOptions) => string[];
+}
 
 /**
  * Checks if the given value is a non-empty string.
@@ -12,9 +19,9 @@ const isString = (v: any): boolean => v && typeof v === 'string';
  * Factory function that creates a BEM (Block Element Modifier) utility.
  *
  * @param {string} [prefix='_'] - The prefix for BEM modifiers.
- * @returns {Function} A BEM utility function.
+ * @returns {BemFunction} A BEM utility function.
  */
-export function Bem(prefix: string = '_'): Function {
+export function Bem(prefix: string = '_'): unBemFunction {
   /**
    * BEM utility function.
    *
@@ -57,9 +64,9 @@ export const unBem = Bem();
  *
  * @param {string} name - The name of the BEM block.
  * @param {string} [prefix='x'] - The prefix for the BEM block.
- * @returns {Function} A BEM namespace utility function.
+ * @returns {NameSpaceResult} A BEM namespace utility function.
  */
-export function useNameSpace(name: string, prefix: string = 'x'): Function {
+export function useNameSpace(name: string, prefix: string = 'x'): NameSpaceResult {
   const block = `${prefix.concat('-')}${name}`;
 
   /**
