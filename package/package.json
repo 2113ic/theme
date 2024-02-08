@@ -1,6 +1,5 @@
 {
   "name": "@icxy/theme",
-  "type": "module",
   "version": "0.2.1",
   "description": "2113ic's website theme component and color library",
   "author": "2113ic <icxiaoyanz@gmail.com>",

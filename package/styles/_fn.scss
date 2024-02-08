@@ -2,19 +2,15 @@
 @use 'sass:string';
 @use './vars' as *;
 
-@function join($list, $separator: '-') {
-  $result: $prefix + $separator;
-  $len: length($list);
+@function join($list) {
+  $name: $prefix;
 
-  @for $i from 1 through $len {
-    $item: nth($list, $i);
-    $result: $result + $item;
-
-    @if $i < $len and $item != '' {
-      $result: $result + $separator;
+  @each $item in $list {
+    @if $item != '' {
+      $name: $name + '-' + $item;
     }
   }
-  @return $result;
+  @return $name;
 }
 
 @function get($val, $levels: null) {

@@ -2,35 +2,45 @@
 
 $prefix: 'x' !default;
 
-// Base
-$baseMap: (
-  white: #fff,
-  black: #131416,
-  primary: #3c97dd,
-  red    : #fa5347,
-  green  : #1eb3a1,
-  blue   : #2c5ced,
-  yellow : #ffab1a,
-  gray   : #5f646d,
-) !default;
-@function getBase($color) {
-  @return map.get($baseMap, $color);
+$white: #fff !default;
+$black: #131416 !default;
+
+$colors: () !default;
+$colors: map.deep-merge(
+  (  
+    primary: #3c97dd,
+    red    : #fa5347,
+    green  : #1eb3a1,
+    blue   : #2c5ced,
+    yellow : #ffab1a,
+    gray   : #5f646d,
+  ),
+  $colors
+);
+
+@function getColor($color) {
+  @return map.get($colors, $color);
 }
 
 // Grey
-$grayMap: (
-  50 : hsl(240, 7%, 97%),
-  100: hsl(210, 8%, 95%),
-  200: hsl(225, 7%, 89%),
-  300: hsl(217, 7%, 78%),
-  400: hsl(224, 6%, 64%),
-  500: hsl(218, 7%, 55%),
-  600: hsl(219, 7%, 40%),
-  700: hsl(214, 5%, 28%),
-  800: hsl(218, 7%, 22%),
-  900: hsl(225, 7%, 14%),
-  950: hsl(220, 7%, 8%),
+$grayMap: () !default;
+$grayMap: map.deep-merge(
+  (
+    50 : hsl(240, 7%, 97%),
+    100: hsl(210, 8%, 95%),
+    200: hsl(225, 7%, 89%),
+    300: hsl(217, 7%, 78%),
+    400: hsl(224, 6%, 64%),
+    500: hsl(218, 7%, 55%),
+    600: hsl(219, 7%, 40%),
+    700: hsl(214, 5%, 28%),
+    800: hsl(218, 7%, 22%),
+    900: hsl(225, 7%, 14%),
+    950: hsl(220, 7%, 8%),
+  ),
+  $grayMap
 ) !default;
+
 @function getGray($level) {
   @return map.get($grayMap, $level);
 }

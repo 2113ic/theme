@@ -2,7 +2,7 @@
 @use './mixins' as *;
 
 :root {
-  @include genCSSVar($baseMap);
+  @include genCSSVar($colors);
   @include genCSSVar($grayMap, 'gray');
 }
 
